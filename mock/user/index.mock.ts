@@ -29,6 +29,13 @@ const List: {
     role: 'admin',
     roleId: '3',
     permissions: ['*.*.*']
+  },
+  {
+    username: 'ccsDev',
+    password: 'ccsDev123',
+    role: 'devloper',
+    roleId: '4',
+    permissions: ['*.*.*']
   }
 ]
 

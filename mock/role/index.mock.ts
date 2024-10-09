@@ -152,6 +152,74 @@ const adminList = [
   }
 ]
 
+const devloperList = [
+  {
+    path: '/home',
+    component: '#',
+    redirect: '/home/homeData',
+    name: 'Home',
+    meta: {
+      title: 'router.dashboard',
+      icon: 'ant-design:dashboard-filled',
+      alwaysShow: true,
+    },
+    children: [
+      {
+        path: 'homeData',
+        name: 'HomeData',
+        component: 'views/Home/HomeData',
+        meta: {
+          title: 'router.workplace',
+          noCache: true,
+          affix: true
+        }
+      }
+    ]
+  },
+  {
+    path: '/select',
+    component: '#',
+    redirect: '/home/HomeData',
+    name: 'Select',
+    meta: {
+      title: 'router.caliResSearch',
+      icon: 'carbon:search',
+      alwaysShow: true,
+    },
+    children: [
+      {
+        path: 'devSelect',
+        name: 'DevSelect',
+        component: 'views/Select/DevSelect',
+        meta: {
+          title: 'router.devCaliResSearch'
+        }
+      }
+    ]
+  },
+  {
+    path: '/function',
+    component: '#',
+    redirect: '/home/HomeData',
+    name: 'Function',
+    meta: {
+      title: 'router.function',
+      icon: 'ri:function-fill',
+      alwaysShow: true,
+    },
+    children: [
+      {
+        path: 'dataComparison',
+        name: 'DataComparison',
+        component: 'views/Function/DataComparison',
+        meta: {
+          title: 'router.dataComparison'
+        }
+      }
+    ]
+  }
+]
+
 
 export default [
   // 列表接口
@@ -160,10 +228,18 @@ export default [
     method: 'get',
     timeout,
     response: ({ query }) => {
+
       const { roleName } = query
+      let dataList: any[]  = []
+      if (roleName === 'admin') {
+        dataList = adminList
+      }else if (roleName === 'devloper') {
+        dataList = devloperList
+      }
+
       return {
         code: SUCCESS_CODE,
-        data: roleName === 'admin' ? adminList : []
+        data: dataList
       }
     }
   }
