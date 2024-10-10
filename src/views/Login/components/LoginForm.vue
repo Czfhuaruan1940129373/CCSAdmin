@@ -263,7 +263,7 @@ const signIn = async () => {
   })
 }
 
-// 获取角色信息
+// 获取角色对应的路由权限
 const getRole = async () => {
   // const formData = await getFormData<UserType>()
   // const params = {

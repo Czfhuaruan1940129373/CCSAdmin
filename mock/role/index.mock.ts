@@ -97,7 +97,7 @@ const adminList = [
   {
     path: '/select',
     component: '#',
-    redirect: '/home/HomeData',
+    redirect: '/select/globalSelect',
     name: 'Select',
     meta: {
       title: 'router.caliResSearch',
@@ -125,7 +125,7 @@ const adminList = [
   {
     path: '/function',
     component: '#',
-    redirect: '/home/HomeData',
+    redirect: '/function/caliFiles',
     name: 'Function',
     meta: {
       title: 'router.function',
@@ -179,7 +179,7 @@ const devloperList = [
   {
     path: '/select',
     component: '#',
-    redirect: '/home/HomeData',
+    redirect: '/select/devSelect',
     name: 'Select',
     meta: {
       title: 'router.caliResSearch',
@@ -200,7 +200,7 @@ const devloperList = [
   {
     path: '/function',
     component: '#',
-    redirect: '/home/HomeData',
+    redirect: '/function/dataComparison',
     name: 'Function',
     meta: {
       title: 'router.function',
