@@ -384,7 +384,25 @@ export default {
     calibrationSelect: '校准结果查询'
   },
   globalSelect: {
-    selectTitle: '全局校准结果查询'
+    selectTitle: '全局校准结果查询',
+    message: '查询非当天数据,请选择测试日期',
+    inputPlaceholder: '请输入',
+    dateSelectPlaceholder: '请选择日期',
+    labelTestPreson: '测试人员',
+    labelTestDeviceType: '测试设备型号',
+    labelTestDeviceUID: '测试设备UID',
+    labelTestTime: '测试时间',
+    labelTestResult: '测试结果',
+    labelTestResultOption1: '合格',
+    labelTestResultOption2: '不合格',
+    labelCalibrationType: '校准类型',
+    labelCalibrationTypeOption1: '生产',
+    labelCalibrationTypeOption2: '开发',
+    labelCalibrationBusName: '测试车间(部门)',
+    labelCalibrationDevBusName: '技术部',
+    testTimeSelectLast7Days: '最近7天',
+    testTimeSelectLast30Days: '最近30天',
+    testTimeSelectLast3Months: '最近3个月'
   },
   devSelect: {
     selectTitle: '开发者校准结果查询'

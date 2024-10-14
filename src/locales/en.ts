@@ -389,7 +389,25 @@ export default {
     calibrationSelect: 'Calibration response selection'
   },
   globalSelect: {
-    selectTitle: 'global Calibration response select'
+    selectTitle: 'global Calibration response select',
+    message: 'To query non current day data, please select a test date.',
+    inputPlaceholder: 'Please enter',
+    dateSelectPlaceholder: 'Please select a date',
+    labelTestPreson: 'Testers',
+    labelTestDeviceType: 'Test Device Type',
+    labelTestDeviceUID: 'Test Device UID',
+    labelTestTime: 'Test Time',
+    labelTestResult: 'Test result',
+    labelTestResultOption1: 'pass',
+    labelTestResultOption2: 'no pass',
+    labelCalibrationType: 'Calibration Type',
+    labelCalibrationTypeOption1: 'pro',
+    labelCalibrationTypeOption2: 'dev',
+    labelCalibrationBusName: 'Testing Workshop (Department)',
+    labelCalibrationDevBusName: 'Min Tech',
+    testTimeSelectLast7Days: 'Last week',
+    testTimeSelectLast30Days: 'Last month',
+    testTimeSelectLast3Months: 'Last 3 months'
   },
   devSelect: {
     selectTitle: 'devloper Calibration response select'

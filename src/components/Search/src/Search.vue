@@ -135,6 +135,11 @@ watch(
   }
 )
 
+/**
+ * 异步过滤表单模型
+ *
+ * @returns 返回过滤后的表单模型对象
+ */
 const filterModel = async () => {
   const model = await getFormData()
   if (unref(getProps).removeNoValueItem) {
