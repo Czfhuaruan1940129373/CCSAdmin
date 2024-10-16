@@ -36,3 +36,18 @@ VITE_USE_CSS_SPLIT=true
 
 # 是否使用在线图标
 VITE_USE_ONLINE_ICON=true
+
+# 数据库用户名
+DB_CON_USER=dbuser
+
+# 数据库密码
+DB_CON_PASS=yajiangdb2024!
+
+# 数据库名称
+DB_CON_DATABASE=ccsdb_pro
+
+# 数据库地址
+DB_CON_SERVER=192.168.0.32
+
+# 数据库端口号
+DB_CON_PROT=5432

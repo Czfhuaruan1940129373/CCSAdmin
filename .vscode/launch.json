@@ -1,0 +1,30 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",  
+    "configurations": [  
+      {  
+        "type": "chrome",  
+        "request": "launch",  
+        "name": "dev",  
+        "url": "http://localhost:3005", // 确保这个端口与你的 Vite 开发服务器端口相匹配  
+        "webRoot": "${workspaceFolder}/src",  
+        "sourceMaps": true,  
+        "sourceMapPathOverrides": {  
+          "webpack:///./src/*": "${webRoot}/*"  
+        },  
+        "preLaunchTask": "pnpm: dev", // 这将运行你的 task.json 中的label
+        "runtimeExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",    
+        "internalConsoleOptions": "neverOpen",  
+        "trace": true,  
+        "smartStep": true,
+        "showAsyncStacks": true,  
+        "presentation": {  
+          "hidden": false,  
+          "group": "Vue",  
+          "order": 1  
+        }  
+      }  
+    ]
+}

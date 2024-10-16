@@ -1,7 +1,7 @@
 import { MockMethod } from 'vite-plugin-mock'
 import { SUCCESS_CODE } from '@/constants'
 
-const timeout = 1000
+const timeout = 5000
 
 const adminList = [
   {

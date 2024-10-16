@@ -44,7 +44,8 @@ export default {
     refresh: '刷新',
     fullscreen: '全屏',
     size: '尺寸',
-    columnSetting: '列设置'
+    columnSetting: '列设置',
+    resetSuccess: '重置成功'
   },
   lock: {
     lockScreen: '锁定屏幕',

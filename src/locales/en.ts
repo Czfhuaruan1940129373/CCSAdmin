@@ -44,7 +44,8 @@ export default {
     refresh: 'Refresh',
     fullscreen: 'Fullscreen',
     size: 'Size',
-    columnSetting: 'Column setting'
+    columnSetting: 'Column setting',
+    resetSuccess: 'Reset success'
   },
   lock: {
     lockScreen: 'Lock screen',

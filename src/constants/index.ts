@@ -32,3 +32,8 @@ export const DEFAULT_FILTER_COLUMN = ['expand', 'selection']
  * 是否根据headers->content-type自动转换数据格式
  */
 export const TRANSFORM_REQUEST_DATA = true
+
+/**
+ * 请求错误状态码
+ */
+export const ERROR_CODE = 500

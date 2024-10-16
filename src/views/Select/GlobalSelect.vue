@@ -6,15 +6,17 @@ import { reactive, ref } from 'vue'
 import { Search } from '@/components/Search'
 import { FormSchema } from '@/components/Form'
 import { useSearch } from '@/hooks/web/useSearch'
+import { getCcsTestListApi } from '@/api/select'
+import { ElMessage } from 'element-plus'
+import { CcsTestSearchType } from '@/api/select/types'
 
 defineOptions({
   name: 'GlobalSelect'
 })
 
 const { t } = useI18n()
-const { searchRegister, searchMethods } = useSearch()
-// const { setSchema, setProps, setValues, getFormData } = searchMethods
-const { getFormData } = searchMethods
+const { searchRegister } = useSearch()
+
 const shortcuts = [
   {
     text: t('globalSelect.testTimeSelectLast7Days'),
@@ -47,12 +49,12 @@ const shortcuts = [
 
 const schema = reactive<FormSchema[]>([
   {
-    field: 'testPreson',
+    field: 'testPerson',
     label: t('globalSelect.labelTestPreson'),
     component: 'Input'
   },
   {
-    field: 'calibrationBusName',
+    field: 'busName',
     label: t('globalSelect.labelCalibrationBusName'),
     component: 'Select',
     componentProps: {
@@ -90,7 +92,7 @@ const schema = reactive<FormSchema[]>([
     }
   },
   {
-    field: 'testResult',
+    field: 'testRes',
     label: t('globalSelect.labelTestResult'),
     component: 'RadioGroup',
     componentProps: {
@@ -116,17 +118,17 @@ const schema = reactive<FormSchema[]>([
     }
   },
   {
-    field: 'testDeviceType',
+    field: 'lampModelId',
     label: t('globalSelect.labelTestDeviceType'),
     component: 'Input'
   },
   {
-    field: 'testDeviceUID',
+    field: 'lampUid',
     label: t('globalSelect.labelTestDeviceUID'),
     component: 'Input'
   },
   {
-    field: 'calibrationType',
+    field: 'testType',
     label: t('globalSelect.labelCalibrationType'),
     component: 'Select',
     componentProps: {
@@ -149,16 +151,39 @@ const schema = reactive<FormSchema[]>([
   }
 ])
 
-const isGrid = ref(false)
+const isGrid = ref(true)
 
 const layout = ref('inline')
 
 const buttonPosition = ref('left')
 
+const pageNum = ref(1)
+
+const pageSize = ref(10)
+
+const searchData = reactive({}) as CcsTestSearchType
+
 const handleSearch = async (data: any) => {
-  const formData = await getFormData()
-  console.log(formData)
-  console.log(data)
+  searchData.lampUid = data.lampUid ? data.lampUid : undefined
+  searchData.lampModelId = data.lampModelId ? data.lampModelId : undefined
+  searchData.busName = data.busName ? data.busName : undefined
+  searchData.testPerson = data.testPerson ? data.testPerson : undefined
+  searchData.testRes = data.testRes ? data.testRes : undefined
+  searchData.testType = data.testType ? data.testType : undefined
+  searchData.testStartTime = data.testTime ? data.testTime[0] : undefined
+  searchData.testEndTime = data.testTime ? data.testTime[1] : undefined
+  searchData.pageNum = pageNum.value
+  searchData.pageSize = pageSize.value
+
+  console.log(searchData)
+  const res = await getCcsTestListApi(searchData)
+  console.log(res)
+}
+
+const handleReset = () => {
+  //setValues({})
+  ElMessage.success(t('common.resetSuccess'))
+  // resetLoading.value = true
 }
 
 const searchLoading = ref(false)
@@ -178,7 +203,7 @@ const resetLoading = ref(false)
       show-expand
       expand-field="testTime"
       @search="handleSearch"
-      @reset="handleSearch"
+      @reset="handleReset"
       @register="searchRegister"
     />
   </ContentWrap>
