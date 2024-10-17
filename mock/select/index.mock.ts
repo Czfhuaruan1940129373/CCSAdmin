@@ -17,19 +17,22 @@ export default [
       const paramType: CcsTestSearchType = query
       //如果请求中不包含pageNum和pageSize，则返回错误信息
       if(paramType.pageNum == undefined || paramType.pageSize == undefined)
-          return { code: ERROR_CODE } as CcsTestListType
+          return { code: ERROR_CODE, message: '缺少分页参数' } 
       
 
       return {
         code: SUCCESS_CODE,
-        data: [
-          { id: 1, testPerson: '测试数据1' },
-          { id: 2, testPerson: '测试数据2' }
-        ] as CcsTestType[],
-        pageNum: paramType.pageNum,
-        pageSize: paramType.pageSize,
-        pageCount: 100 
-      } as CcsTestListType
+        message: '查询成功',
+        data:{
+          list:[
+            { id: 1, testPerson: '测试数据1' },
+            { id: 2, testPerson: '测试数据2' }
+          ] as CcsTestType[],
+          pageNum: paramType.pageNum,
+          pageSize: paramType.pageSize,
+          pageCount: 100 
+        } as CcsTestListType
+      } 
     }
   }
 ] as MockMethod[]

@@ -33,8 +33,7 @@ export type CcsTestSearchType = {
 
 // 测试数据列表返回类
 export type CcsTestListType = {
-  code: number //状态码
-  data: CcsTestType[] | undefined //测试数据列表
+  list: CcsTestType[] | undefined //测试数据列表
   pageNum: number | undefined //当前页码
   pageSize: number | undefined //每页显示条数
   pageCount: number | undefined //总页数
