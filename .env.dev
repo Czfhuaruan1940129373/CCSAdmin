@@ -51,3 +51,12 @@ DB_CON_SERVER=192.168.0.32
 
 # 数据库端口号
 DB_CON_PROT=5432
+
+#最大连接数
+DB_CON_MAX=15
+
+#空闲客户端关闭前等待的毫秒数
+DB_CON_IDLETIMEOUT=30000
+
+#连接新客户端时超时前等待的毫秒数
+DB_CON_TIMEOUT=1000

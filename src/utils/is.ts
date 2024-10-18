@@ -1,15 +1,31 @@
 // copy to vben-admin
 
 const toString = Object.prototype.toString
-
+/**
+ * 判断给定值是否为指定的类型
+ *
+ * @param val 需要判断的值
+ * @param type 指定的类型字符串，如 'Object', 'Number', 'String' 等
+ * @returns 如果给定值是指定类型，则返回 true；否则返回 false
+ */
 export const is = (val: unknown, type: string) => {
   return toString.call(val) === `[object ${type}]`
 }
-
+/**
+ * 判断给定值是否存在（即非undefined）
+ *
+ * @param val 待判断的值
+ * @returns 如果给定值存在，则返回true；否则返回false
+ */
 export const isDef = <T = unknown>(val?: T): val is T => {
   return typeof val !== 'undefined'
 }
-
+/**
+ * 判断给定的值是否为未定义
+ *
+ * @param val 待判断的值，可以是任意类型
+ * @returns 如果值为未定义，则返回true，否则返回false
+ */
 export const isUnDef = <T = unknown>(val?: T): val is T => {
   return !isDef(val)
 }
@@ -17,7 +33,14 @@ export const isUnDef = <T = unknown>(val?: T): val is T => {
 export const isObject = (val: any): val is Record<any, any> => {
   return val !== null && is(val, 'Object')
 }
-
+/**
+ * 判断给定的值是否为空
+ *
+ * @param val 要判断的值
+ * @returns 如果值为空，则返回true；否则返回false
+ *
+ * @template T 值的类型，默认为unknown
+ */
 export const isEmpty = <T = unknown>(val: T): val is T => {
   if (isArray(val) || isString(val)) {
     return val.length === 0

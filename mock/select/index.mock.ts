@@ -1,8 +1,8 @@
 import { MockMethod } from 'vite-plugin-mock'
 import { SUCCESS_CODE, ERROR_CODE } from '@/constants'
 import { CcsTestType, CcsTestListType, CcsTestSearchType } from '@/api/select/types'
-// import { pool } from '@/plugins/pgsql/index'
 import * as util from 'util' // 导入 Node.js 的 util 模块  
+import { pgQuery } from '@/plugins/pgsql'
 
 const timeout = 1000
 
@@ -19,6 +19,8 @@ export default [
       if(paramType.pageNum == undefined || paramType.pageSize == undefined)
           return { code: ERROR_CODE, message: '缺少分页参数' } 
       
+      const res = pgQuery("select * from ccs_test_20240923 where test_person = $1 ",["陈志锋"]);
+      console.log("数据库测试结果：", util.inspect(res, { depth: null, colors: true })) 
 
       return {
         code: SUCCESS_CODE,

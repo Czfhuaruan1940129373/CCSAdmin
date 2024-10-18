@@ -15,11 +15,6 @@ interface ImportMetaEnv {
   readonly VITE_DROP_CONSOLE: string
   readonly VITE_SOURCEMAP: string
   readonly VITE_OUT_DIR: string
-  readonly DB_CON_USER: string
-  readonly DB_CON_PASS: string
-  readonly DB_CON_DATABASE: string
-  readonly DB_CON_SERVER: string
-  readonly DB_CON_PROT: number
 }
 
 declare global {

@@ -14,5 +14,5 @@ Object.keys(modules).forEach(async (key) => {
 })
 
 export function setupProdMockServer() {
-  createProdMockServer(mockModules)
+    createProdMockServer(mockModules)
 }
