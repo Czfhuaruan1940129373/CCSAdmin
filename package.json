@@ -1,5 +1,5 @@
 {
-  "name": "vue-element-plus-admin",
+  "name": "ccs-admin",
   "version": "1.0.0",
   "description": "vue3、element-plus、typesScript、vite4",
   "author": "CZF",
@@ -44,7 +44,6 @@
     "lodash-es": "^4.17.21",
     "mitt": "^3.0.1",
     "nprogress": "^0.2.0",
-    "pg": "^8.13.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "qrcode": "^1.5.3",
