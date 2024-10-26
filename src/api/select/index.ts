@@ -10,5 +10,5 @@ import type { CcsTestListType, CcsTestSearchType } from './types'
 export const getCcsTestListApi = (
   params: CcsTestSearchType
 ): Promise<IResponse<CcsTestListType>> => {
-  return request.get({ url: '/mock/select/caliResultList', params })
+  return request.get({ url: '/select/getCaliResultList', params })
 }

@@ -403,7 +403,9 @@ export default {
     labelCalibrationDevBusName: '技术部',
     testTimeSelectLast7Days: '最近7天',
     testTimeSelectLast30Days: '最近30天',
-    testTimeSelectLast3Months: '最近3个月'
+    testTimeSelectLast3Months: '最近3个月',
+    labelProId: '生产批号',
+    labelTestId: '测试编号'
   },
   devSelect: {
     selectTitle: '开发者校准结果查询'

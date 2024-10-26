@@ -49,7 +49,7 @@ const schema = reactive<FormSchema[]>([
     }
   },
   {
-    field: 'username',
+    field: 'userName',
     label: t('login.username'),
     // value: 'admin',
     component: 'Input',
@@ -192,8 +192,8 @@ const remember = ref(userStore.getRememberMe)
 const initLoginInfo = () => {
   const loginInfo = userStore.getLoginInfo
   if (loginInfo) {
-    const { username, password } = loginInfo
-    setValues({ username, password })
+    const { userName, password } = loginInfo
+    setValues({ userName, password })
   }
 }
 onMounted(() => {
@@ -236,7 +236,7 @@ const signIn = async () => {
           // 是否记住我
           if (unref(remember)) {
             userStore.setLoginInfo({
-              username: formData.username,
+              userName: formData.userName,
               password: formData.password
             })
           } else {
@@ -246,7 +246,7 @@ const signIn = async () => {
           userStore.setUserInfo(res.data)
           // 是否使用动态路由(默认为使用)
           if (appStore.getDynamicRouter) {
-            getRole()
+            await getRole()
           } else {
             await permissionStore.generateRoutes('static').catch(() => {})
             permissionStore.getAddRouters.forEach((route) => {
@@ -272,7 +272,7 @@ const getRole = async () => {
 
   //通过登录成功后的角色（role）获取路由信息
   const params = {
-    roleName: userStore.getUserInfo?.role
+    roleName: userStore.getUserInfo?.roleName
   }
   const res =
     appStore.getDynamicRouter && appStore.getServerDynamicRouter

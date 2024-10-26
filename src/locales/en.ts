@@ -408,7 +408,9 @@ export default {
     labelCalibrationDevBusName: 'Min Tech',
     testTimeSelectLast7Days: 'Last week',
     testTimeSelectLast30Days: 'Last month',
-    testTimeSelectLast3Months: 'Last 3 months'
+    testTimeSelectLast3Months: 'Last 3 months',
+    labelProId: 'Pro ID',
+    labelTestId: 'Test ID'
   },
   devSelect: {
     selectTitle: 'devloper Calibration response select'

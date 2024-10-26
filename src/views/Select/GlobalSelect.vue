@@ -103,7 +103,7 @@ const schema = reactive<FormSchema[]>([
         },
         {
           label: t('globalSelect.labelTestResultOption2'),
-          value: 0
+          value: 2
         }
       ]
     }
@@ -148,6 +148,16 @@ const schema = reactive<FormSchema[]>([
         }
       }
     }
+  },
+  {
+    field: 'proId',
+    label: t('globalSelect.labelProId'),
+    component: 'Input'
+  },
+  {
+    field: 'testId',
+    label: t('globalSelect.labelTestId'),
+    component: 'Input'
   }
 ])
 
@@ -170,8 +180,10 @@ const handleSearch = async (data: any) => {
   searchData.testPerson = data.testPerson ? data.testPerson : undefined
   searchData.testRes = data.testRes ? data.testRes : undefined
   searchData.testType = data.testType ? data.testType : undefined
-  searchData.testStartTime = data.testTime ? data.testTime[0] : undefined
-  searchData.testEndTime = data.testTime ? data.testTime[1] : undefined
+  searchData.lessTestTime = data.testTime ? data.testTime[0] : undefined
+  searchData.greaterTestTime = data.testTime ? data.testTime[1] : undefined
+  searchData.proId = data.proId ? data.proId : undefined
+  searchData.testId = data.testId ? data.testId : undefined
   searchData.pageNum = pageNum.value
   searchData.pageSize = pageSize.value
 
