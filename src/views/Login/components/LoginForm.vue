@@ -272,7 +272,7 @@ const getRole = async () => {
 
   //通过登录成功后的角色（role）获取路由信息
   const params = {
-    roleName: userStore.getUserInfo?.roleName
+    roleName: userStore.getUserInfo?.roleName as string
   }
   const res =
     appStore.getDynamicRouter && appStore.getServerDynamicRouter
