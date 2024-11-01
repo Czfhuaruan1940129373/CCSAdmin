@@ -172,7 +172,8 @@ export default {
     globalCaliResSearch: 'Global',
     function: 'Function',
     caliFiles: 'Calibration File Management',
-    dataComparison: 'Data Comparison'
+    dataComparison: 'Data Comparison',
+    testContent: 'Test Content'
   },
   permission: {
     hasPermission: 'Please set the operation permission value'
@@ -410,7 +411,19 @@ export default {
     testTimeSelectLast30Days: 'Last month',
     testTimeSelectLast3Months: 'Last 3 months',
     labelProId: 'Pro ID',
-    labelTestId: 'Test ID'
+    labelTestId: 'Test ID',
+    tableId: 'Test ID',
+    tableLampModelId: 'Lamp Model ID',
+    tableTestPreson: 'Test Preson',
+    tableBusName: 'Bus Name',
+    tableTestStartTime: 'Start Time',
+    tableTestEndTime: 'End Time',
+    tableTestResult: 'Test Result',
+    tableProId: 'Pro ID',
+    tableLampUid: 'Lamp UID',
+    tableTestCount: 'Test Count',
+    tableResOK: 'pass',
+    tableResNO: 'no pass'
   },
   devSelect: {
     selectTitle: 'devloper Calibration response select'

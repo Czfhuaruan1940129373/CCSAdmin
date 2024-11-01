@@ -109,6 +109,16 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         meta: {
           title: t('router.globalCaliResSearch')
         }
+      },
+      {
+        path: 'selectContent/:id',
+        name: 'SelectContent',
+        component: () => import('@/views/Select/SelectContent.vue'),
+        meta: {
+          hidden: true,
+          canTo: true,
+          title: t('router.testContent')
+        }
       }
     ]
   },

@@ -172,7 +172,8 @@ export default {
     globalCaliResSearch: '全局查询',
     function: '功能',
     caliFiles: '校准文件管理',
-    dataComparison: '数据对比'
+    dataComparison: '数据对比',
+    testContent: '测试内容'
   },
   permission: {
     hasPermission: '请设置操作权限值'
@@ -405,7 +406,19 @@ export default {
     testTimeSelectLast30Days: '最近30天',
     testTimeSelectLast3Months: '最近3个月',
     labelProId: '生产批号',
-    labelTestId: '测试编号'
+    labelTestId: '测试编号',
+    tableId: '测试编号',
+    tableLampModelId: '灯具型号',
+    tableTestPreson: '测试人员',
+    tableBusName: '车间/部门',
+    tableTestStartTime: '开始时间',
+    tableTestEndTime: '结束时间',
+    tableTestResult: '测试结果',
+    tableProId: '生产批号',
+    tableLampUid: '灯具UID',
+    tableTestCount: '测试次数',
+    tableResOK: '通过',
+    tableResNO: '不通过'
   },
   devSelect: {
     selectTitle: '开发者校准结果查询'

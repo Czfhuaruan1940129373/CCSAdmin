@@ -16,6 +16,8 @@ export type CcsTestType = {
   testCout: number | undefined //测试次数
   testRes: number | undefined //测试结果(0:不合格，1:合格)
   proId: string | undefined //生产批号
+  colorNum: number | undefined //颜色数量
+  testErrorCount: number | undefined //测试错误次数
 }
 
 // 测试数据搜索条件类
@@ -39,5 +41,5 @@ export type CcsTestListType = {
   list: CcsTestType[] | undefined //测试数据列表
   pageNum: number | undefined //当前页码
   pageSize: number | undefined //每页显示条数
-  pageCount: number | undefined //总页数
+  pageCount: number | undefined //总条数
 }
